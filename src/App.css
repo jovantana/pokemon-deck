@@ -1,0 +1,156 @@
+/* App screen */
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;    
+}
+
+.message {
+  font-size: 1rem;
+}
+.message.error {
+  color: darkred;
+}
+
+/* Card stack */
+.card-stack-container {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  display: inline-block;
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
+.card-stack-container .card-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-stack-container .card-stack h3 {
+  margin: 0.5rem 0;
+}
+
+/* Card */
+.card {
+  width: 4.5rem;
+  height: auto;
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  width: 4rem;
+  min-height: 4rem;
+  height: auto;
+  pointer-events: none;
+}
+.card p {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  white-space: preserve nowrap;
+}
+
+.card.active {
+  border-color: darkblue;
+}
+
+/* Selected card display */
+.selected-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.selected-display .card {
+  display: inline-block;
+  width: initial;
+  height: auto;
+  background: white;
+  border-radius: 0.85rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+}
+.selected-display .card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.selected-display .card img {
+  width: 10rem;
+  min-height: 10rem;
+  height: auto;
+  pointer-events: none;
+}
+.selected-display .card p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  white-space: preserve nowrap;
+}
+
+/* Decks */
+.decks {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Deck */
+.deck-container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  min-width: 12rem;
+  min-height: 8rem;
+}
+
+.deck-name {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.25rem 0;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+.deck-name-input {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.25rem 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+}
+
+.deck-cards {
+  display: flex;
+  gap: 1rem;
+  width: 100%;  
+  flex-grow: 1;
+}
